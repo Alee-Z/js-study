@@ -1,0 +1,261 @@
+<mxfile host="65bd71144e">
+    <diagram id="YGtocZW39s7tbxrgwTOo" name="高阶函数执行过程">
+        <mxGraphModel dx="1983" dy="993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="540" width="300" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="552.5" width="340" height="535" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="调用栈ECStack" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="500" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="堆" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="505" y="510" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="920" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="VO:GO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="920" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="全局作用域上下文GEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="900" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="string&lt;br&gt;window&lt;br&gt;settimeout&lt;br&gt;&lt;br&gt;foo：0xa00&lt;br&gt;fn" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="585" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="GO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="565" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="parent scope:GO&lt;br&gt;代码块" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="foo函数对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="770" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="代码执行&lt;br&gt;1.调用foo()创建foo函数执行上下文&amp;nbsp; 创建AO（foo)&lt;br&gt;2.执行foo 赋值fn=0xb00&lt;br&gt;3.foo-FEC弹出调用栈 AO没有引用进行销毁&lt;br&gt;4.调用fn() 创建fn-FEC 创建AO&lt;br&gt;5.执行bar 打印&lt;br&gt;6.bar-EFC弹出 AO销毁 bar函数对象销毁" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="970" width="260" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="585" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="AO(bar)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="585" y="565" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="parent scope:foo&lt;br&gt;代码块" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="bar函数对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="770" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="750" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="VO：AO+GO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="750" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="代码执行&lt;br&gt;1.打印&quot;bar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="810" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="fn(bar)函数执行上下文FEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="730" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="320" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="VO：AO+GO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="320" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="代码执行&lt;br&gt;1.返回bar" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="380" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="foo函数执行上下文FEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="300" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="curved=1;endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="540" as="sourcePoint"/>
+                        <mxPoint x="370" y="390" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="340" y="540"/>
+                            <mxPoint x="290" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="弹出" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="460" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="33" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="789.6666666666667" y="485.16666666666674" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="&lt;br&gt;bar：0xb00" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="380" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="curved=1;endArrow=classic;html=1;entryX=-0.014;entryY=0.692;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="33" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="710" y="550" as="sourcePoint"/>
+                        <mxPoint x="770" y="500" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="760" y="550"/>
+                            <mxPoint x="710" y="500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="销毁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="500" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="AO(foo)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="360" width="60" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="ylVnTuJyORpYXMzMk_qK" name="闭包">
+        <mxGraphModel dx="1388" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="xfHXiUz9f4-6-7-tUjYB-0"/>
+                <mxCell id="xfHXiUz9f4-6-7-tUjYB-1" parent="xfHXiUz9f4-6-7-tUjYB-0"/>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="40" y="540" width="300" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="410" y="530" width="580" height="535" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-2" value="调用栈ECStack" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="30" y="500" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-3" value="堆" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="505" y="510" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="50" y="920" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-5" value="VO:0x100(GO)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="60" y="920" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-6" value="全局作用域上下文GEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="40" y="900" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-7" value="string&lt;br&gt;window&lt;br&gt;settimeout&lt;br&gt;&lt;br&gt;foo：0xa00&lt;br&gt;fn:0xb00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="440" y="585" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-8" value="GO 0x100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="450" y="565" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-9" value="parent scope:0x100(GO)&lt;br&gt;代码块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="450" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-10" value="foo函数对象 0xa00" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="450" y="770" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-11" value="代码执行&lt;br&gt;1.调用foo()创建foo函数执行上下文&amp;nbsp; 创建AO（foo)&lt;br&gt;2.执行foo 赋值fn=0xb00&lt;br&gt;3.foo-FEC弹出调用栈 AO没有引用进行销毁&lt;br&gt;4.调用fn() 创建fn-FEC 创建AO&lt;br&gt;5.执行bar 打印&lt;br&gt;6.bar-EFC弹出 AO销毁" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="60" y="970" width="260" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-12" value="name:“foo”" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="825" y="585" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-13" value="AO(bar) 0x300" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="820" y="565" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-14" value="parent scope:0x200(foo)&lt;br&gt;代码块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="610" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-15" value="bar函数对象 0xb00" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="610" y="770" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="50" y="750" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-17" value="VO：AO+GO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="60" y="750" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-18" value="代码执行&lt;br&gt;1.name赋值 自己作用域没有name&amp;nbsp; 根据parentScope的指向到0x200中找到name&lt;br&gt;2.打印" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="60" y="810" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-19" value="fn(bar)函数执行上下文FEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="40" y="730" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="375" y="320" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-21" value="VO：AO(foo)+GO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="385" y="320" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-22" value="代码执行&lt;br&gt;1.name赋值&lt;br&gt;2.返回bar 0xb00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="385" y="380" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-23" value="foo函数执行上下文FEC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="365" y="300" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-24" value="" style="curved=1;endArrow=classic;html=1;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="540" as="sourcePoint"/>
+                        <mxPoint x="370" y="390" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="340" y="540"/>
+                            <mxPoint x="290" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-25" value="弹出" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="310" y="460" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-27" value="name:&quot;foo&quot;&lt;br&gt;bar：0xb00" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="630" y="585" width="140" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-30" value="AO(foo) 0x200" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="625" y="565" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-32" value="" style="endArrow=classic;html=1;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1" source="vt1Ye9oy661zQXC6isUq-7" target="vt1Ye9oy661zQXC6isUq-10">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="750" as="sourcePoint"/>
+                        <mxPoint x="570" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-33" value="" style="endArrow=classic;html=1;entryX=0.175;entryY=1.15;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.571;exitY=0.81;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1" source="vt1Ye9oy661zQXC6isUq-7" target="vt1Ye9oy661zQXC6isUq-15">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="510" y="690" as="sourcePoint"/>
+                        <mxPoint x="610" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-34" value="" style="endArrow=classic;html=1;entryX=0.171;entryY=0.99;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1" target="vt1Ye9oy661zQXC6isUq-7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="780" as="sourcePoint"/>
+                        <mxPoint x="520" y="730" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-35" value="" style="endArrow=classic;html=1;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1" source="vt1Ye9oy661zQXC6isUq-15" target="vt1Ye9oy661zQXC6isUq-27">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="680" y="760" as="sourcePoint"/>
+                        <mxPoint x="730" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-36" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1" source="vt1Ye9oy661zQXC6isUq-27" target="vt1Ye9oy661zQXC6isUq-14">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="750" y="760" as="sourcePoint"/>
+                        <mxPoint x="800" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-38" value="" style="curved=1;endArrow=classic;html=1;" edge="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="930" y="590" as="sourcePoint"/>
+                        <mxPoint x="1030" y="410" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="980" y="590"/>
+                            <mxPoint x="930" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vt1Ye9oy661zQXC6isUq-39" value="销毁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xfHXiUz9f4-6-7-tUjYB-1">
+                    <mxGeometry x="970" y="480" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
