@@ -28,19 +28,19 @@
 var obj = {
     name: "why",
     age: 20,
-    address: "上海市"
+    _address: "上海市"
 }
 
-Object.defineProperty(obj,"address",{
+Object.defineProperty(obj,"_address",{
     enumerable: true,
     configurable: true,
     get: function(){
         foo()
-        return this.address
+        return this._address
     },
     set: function(value){
         bar()
-        this.address = value
+        this._address = value
     }
 })
 
@@ -51,6 +51,6 @@ function foo(){
 function bar(){
     console.log("设置了一次address的值");
 }
-console.log(obj.address);
-obj.address = "北京市"
-console.log(obj.address);
+console.log(obj._address);
+obj._address = "北京市"
+console.log(obj._address);
