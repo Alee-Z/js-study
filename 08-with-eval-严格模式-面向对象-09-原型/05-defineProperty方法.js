@@ -32,7 +32,7 @@ var obj = {
 }
 
 Object.defineProperty(obj,"_address",{
-    enumerable: true,
+    enumerable: true,//在浏览器中可以看见但是颜色较浅  浏览器为了我们方便调试显示了一下 实质上还是不可枚举的
     configurable: true,
     get: function(){
         foo()
