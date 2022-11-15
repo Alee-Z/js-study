@@ -25,4 +25,17 @@ console.log(i);
 for(let j = 0;j<3;j++){
     
 }
+
+// {
+//     let j=0
+//     console.log(j);
+// }
+// {
+//     let j=1
+//     console.log(j);
+// }
+// {
+//     let j=2
+//     console.log(j);
+// }
 // console.log(j);
